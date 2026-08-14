@@ -4,6 +4,7 @@ public class Ques6 {
 // Three way rotation
 
     public static void main(String[] args) {
+        
         int a = 10;  // a = 30
         int b = 20;  // b = 10
         int c = 30;  // c = 20
