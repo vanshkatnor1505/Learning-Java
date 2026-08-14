@@ -18,5 +18,6 @@ public class Ques8 {
         System.out.print(third);
         System.out.print(second);
         System.out.print(first);
+        
     }
 }
