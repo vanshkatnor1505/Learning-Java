@@ -15,6 +15,7 @@ public class Ques5 {
         int scorePerPlayer = finalScore / players;
         int remainingPoints = finalScore % players;
 
+        
         System.out.println("ENEMY POINTS      : " +  enemyPoints);
         System.out.println("RAW SCORE         : " + rawScore);
         System.out.println("FINAL SCORE       : " + finalScore);
