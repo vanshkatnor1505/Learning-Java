@@ -22,9 +22,9 @@ public class Ques9 {
         if (first1 == fourth2 && second1 == third2 && third1 == second2 && fourth1 == first2 ) {
             result = "Palindrome";
         }
-        else
+        else{
             result = " Not a Palindrome";
-
+        }
         
         System.out.println("Original : " + num1);
         System.out.println("Reversed : " + num2);
