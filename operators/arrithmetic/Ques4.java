@@ -11,6 +11,7 @@ public class Ques4 {
         int totalRevenue = ticketRevenue + snackRevenue;
         int profit = totalRevenue - staffCost;
         int averageRevenue = totalRevenue / ticketsSold;
+        
 
         System.out.println("TICKET REVENUE  : " + ticketRevenue);
         System.out.println("TOTAL REVENUE   : " + totalRevenue);
