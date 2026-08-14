@@ -15,5 +15,6 @@ public class Ques2 {
         b = temp;
 
         System.out.println("AFTER SWAPING " + "a = " + a + " ,b = " + b);
+        
     }
 }
