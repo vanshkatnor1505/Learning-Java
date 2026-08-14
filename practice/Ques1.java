@@ -16,5 +16,6 @@ public class Ques1 {
         a = a - ( b + c );
 
         System.out.println("AFTER SWAPING " + "a = " + a + " ,b = " + b + " ,c = " + c);
+        
     }
 }
