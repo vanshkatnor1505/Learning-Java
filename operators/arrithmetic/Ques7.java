@@ -14,5 +14,6 @@ public class Ques7 {
         System.out.println((number/100)%10);
         System.out.println((number/10)%10);
         System.out.println(number%10);
+        
     }
 }
