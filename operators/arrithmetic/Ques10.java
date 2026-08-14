@@ -9,5 +9,6 @@ public class Ques10 {
         int middle = (num/100)%10;
         
         System.out.println(middle);
+        
     }
 }
