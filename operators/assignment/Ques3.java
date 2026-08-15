@@ -18,5 +18,6 @@ public class Ques3 {
 
         System.out.println(a *= 3);
         System.out.println(b += 2);
+        
     }
 }
