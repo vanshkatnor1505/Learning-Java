@@ -41,5 +41,6 @@ public class Ques5 {
         System.out.println("HEALTH : " + health);
         System.out.println("ENERGY : " + energy);
         System.out.println("COINS : " + coins);
+        
     }
 }
