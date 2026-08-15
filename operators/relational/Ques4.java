@@ -23,5 +23,6 @@ public class Ques4 {
 
         boolean result = (a < b && a < c) && (a < c && c < b) && (a != b && b != c && c != a);
         System.out.println("RESULT : " + result);
+        
     }
 }
