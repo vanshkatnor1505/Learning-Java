@@ -43,5 +43,6 @@ public class Ques3 {
         System.out.println(condition2);
         System.out.println(condition3);
         System.out.println(condition4);
+        
     }
 }
