@@ -31,5 +31,6 @@ public class Ques1 {
         System.out.println("BELOW COMFORT      : " + belowComfort);
         System.out.println("COMFORTABLE        : " + comfortable);
         System.out.println("ABOVE COMFORTABLE  : " + aboveComfort);
+        
     }
 }
