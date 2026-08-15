@@ -23,5 +23,6 @@ public class Ques2 {
         System.out.println("FAILED      : " + failed);
         System.out.println("PASSED      : " + passed);
         System.out.println("DISTINCTION : " + distinction);
+        
     }
 }
