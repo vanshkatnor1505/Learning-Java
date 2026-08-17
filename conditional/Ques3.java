@@ -30,15 +30,18 @@
 // Final Classification
 // Finally, determine the number's overall classification using these rules:
 // PERFECT
+
 // If:
 // digits are strictly increasing OR strictly decreasing
 // AND all digits are unique
 // AND digit sum is divisible by 3
+
 // BALANCED
 // If:
 // digits are mixed
 // AND all digits are unique
 // AND digit sum is divisible by 5
+
 // CHAOTIC
 // If:
 // digits are mixed
@@ -61,15 +64,19 @@ package conditional;
 
 public class Ques3 {
     public static void main(String[] args) {
-        int number = 58372;
+        int number = 58375;
         String digitOrder = "";
         String pairity = "";
-
+        String unique = "";
+        String classification = "";
+    
         int first = (number/10000);
         int second = (number/1000)%10;
         int third = (number/100)%10;
         int fourth = (number/10)%10;
         int fifth = (number)%10;
+
+        int sum = (first + second + third + fourth + fifth);
 
         // for digit order determination
         if (fifth > fourth && fourth > third && third > second && second > first) {
@@ -93,11 +100,35 @@ public class Ques3 {
             pairity = "MIXED";
         }
 
-        
+        // to check uniqueness 
+        if ((first != second && first != third && first != fourth && first != fifth) && (second != third && second != fourth && second != fifth) && (third != fourth && third != fifth) && (fourth != fifth) ) {
+            unique =  "YES";
+        }
+        else{
+            unique = "NO";
+        }
 
+        if ((digitOrder == "STRICTLY INCREASING" || digitOrder == "STRICTLY DECREASING") && (unique == "YES") && (sum % 3 == 0)) {
+            classification = "PERFECT";
+        }
+        else if ((digitOrder == "MIXED") && (pairity == "MIXED") && (unique == "YES") && (sum % 5 == 0)) {
+            classification = "BALANCED";    
+        }
+        else{
+            classification = "CHAOTIC";
+        }
 
-
-        System.out.println(number);
-        System.out.println(digitOrder);
+        System.out.println("NUMBER         : " + number);
+        System.out.println("DIGIT ORDER    : " + digitOrder);
+        System.out.println("PARITY         : " + pairity);
+        System.out.println("UNIQUE DIGITS  : " + unique);
+        System.out.println("DIGIT SUM      : " + sum);
+        if (number % 3 == 0) {
+            System.out.println("DIVISIBLE BY 3 : YES");
+        }else System.out.println("DIVISIBLE BY 3 : NO");
+        if (number % 5 == 0) {
+            System.out.println("DIVISIBLE BY 5 : YES");
+        }else System.out.println("DIVISIBLE BY 5 : NO");
+        System.out.println("CLASSIFICATION : " + classification);
     }
 }
