@@ -47,6 +47,7 @@
 // digits are mixed
 // AND digits are not all unique
 // AND digit sum is divisible by neither 3 nor 5
+
 // ORDINARY
 // Anything that doesn't satisfy the above categories.
 
@@ -108,14 +109,17 @@ public class Ques3 {
             unique = "NO";
         }
 
-        if ((digitOrder == "STRICTLY INCREASING" || digitOrder == "STRICTLY DECREASING") && (unique == "YES") && (sum % 3 == 0)) {
+        if ((digitOrder.equals("STRICTLY INCREASING") || digitOrder.equals("STRICTLY DECREASING") ) && (unique.equals("YES")) && (sum % 3 == 0)) {
             classification = "PERFECT";
         }
-        else if ((digitOrder == "MIXED") && (pairity == "MIXED") && (unique == "YES") && (sum % 5 == 0)) {
+        else if ((digitOrder.equals("MIXED") ) && (pairity.equals("MIXED") ) && (unique.equals("YES")) && (sum % 5 == 0)) {
             classification = "BALANCED";    
         }
-        else{
+        else if ((digitOrder.equals("MIXED") ) && (pairity.equals("MIXED") ) && (unique.equals("NO")) && (sum % 5 != 0) && (sum % 3 != 0)) {
             classification = "CHAOTIC";
+        }
+        else{
+            classification = "ORDINARY";
         }
 
         System.out.println("NUMBER         : " + number);
@@ -123,10 +127,10 @@ public class Ques3 {
         System.out.println("PARITY         : " + pairity);
         System.out.println("UNIQUE DIGITS  : " + unique);
         System.out.println("DIGIT SUM      : " + sum);
-        if (number % 3 == 0) {
+        if (sum % 3 == 0) {
             System.out.println("DIVISIBLE BY 3 : YES");
         }else System.out.println("DIVISIBLE BY 3 : NO");
-        if (number % 5 == 0) {
+        if (sum % 5 == 0) {
             System.out.println("DIVISIBLE BY 5 : YES");
         }else System.out.println("DIVISIBLE BY 5 : NO");
         System.out.println("CLASSIFICATION : " + classification);
