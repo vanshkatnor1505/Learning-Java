@@ -1,25 +1,20 @@
 // The Scholarship Decision Engine
 
-// A university is evaluating a student for a scholarship.
 
-// Given:
-
+// GIVEN :::: 
 // int marks = 87;
 // int attendance = 91;
 // int familyIncome = 450000;
 // int backlogs = 0;
 
-
 // boolean sportsAchievement = true;
 // boolean disciplinaryIssue = false;
 // boolean recommendation = true;
 
+
 // Your program must determine the student's scholarship category.
-
 // 🏛️ Eligibility Rules
-
 // A student is completely rejected if:
-
 // they have a disciplinary issue
 // OR they have more than 2 backlogs
 // OR attendance is below 60
@@ -27,9 +22,7 @@
 // If none of those occur, continue evaluating.
 
 // 🥇 PREMIUM SCHOLARSHIP
-
 // Student receives PREMIUM if:
-
 // Academic route
 // marks >= 90
 // AND
@@ -49,10 +42,10 @@
 // recommendation == true
 // AND
 // backlogs <= 1
+
+
 // 🥈 STANDARD SCHOLARSHIP
-
 // If they don't qualify for PREMIUM, they can receive STANDARD if:
-
 // marks >= 75
 // AND
 // attendance >= 75
@@ -68,12 +61,10 @@
 // sportsAchievement == true
 // AND
 // backlogs <= 1
+
 // 🥉 NEED-BASED SCHOLARSHIP
-
 // If they don't qualify for either PREMIUM or STANDARD:
-
 // They can receive NEED-BASED if:
-
 // marks >= 60
 // AND
 // attendance >= 70
@@ -81,6 +72,7 @@
 // familyIncome < 300000
 // AND
 // backlogs <= 1
+
 // ❌ OTHERWISE
 // NO SCHOLARSHIP
 // 💰 Scholarship Amount
@@ -95,28 +87,20 @@
 // ₹75000
 // NO SCHOLARSHIP
 // ₹0
-// 🧨 Additional twist
+
 
 // There is a bonus:
-
 // If the student receives PREMIUM and:
-
 // sportsAchievement == true
 // AND
 // familyIncome < 500000
-
 // then add:
-
 // ₹25000
-
 // to the scholarship.
-
 // Otherwise:
-
 // ₹0
-// Output
 
-// Your program should produce:
+// EXPENTED OUTPUT :::: 
 
 // MARKS              : ...
 // ATTENDANCE         : ...
