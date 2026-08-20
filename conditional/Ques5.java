@@ -113,5 +113,61 @@
 package conditional;
 
 public class Ques5 {
-    
+    public static void main(String[] args) {
+        int marks = 87;
+        int attendance = 91;
+        int familyIncome = 450000;
+        int backlogs = 0;
+        int baseAmount = 0;
+        int bonus = 0;
+
+        boolean sportsAchievement = true;
+        boolean disciplinaryIssue = false;
+        boolean recommendation = true;
+        boolean eligibility = true;
+
+        String scholarshipType = "";
+
+        if (disciplinaryIssue || backlogs > 2 || attendance < 60) {
+            eligibility =  false;
+        }
+
+        if (eligibility) {
+            if ((marks >= 90 && attendance >= 85 && backlogs == 0) || (marks >= 80 && attendance >= 80 && sportsAchievement && recommendation && backlogs <= 1)) {
+                scholarshipType = "PREMIUM";
+            }
+            else if ((marks >= 75 && attendance >= 75 && backlogs <= 2) || (marks >= 65 && attendance >= 85 && sportsAchievement && backlogs <= 1)) {
+                scholarshipType = "STANDARD";
+            }
+            else if (marks >= 60 && attendance >= 70 && familyIncome < 300000 && backlogs <= 1) {
+                scholarshipType = "NEED-BASED";
+            }
+            else {
+                scholarshipType = "NO SCHOLARSHIP";
+            }
+        }
+
+        if (scholarshipType.equals("PREMIUM")) {
+            baseAmount = 100000;
+        }
+        else if (scholarshipType.equals("STANDARD")) {
+            baseAmount = 50000;
+        }
+        else if (scholarshipType.equals("NEED-BASED")) {
+            baseAmount = 75000;
+        }
+
+        if ((scholarshipType.equals("PREMIUM")) && familyIncome < 500000 ) {
+            bonus = 25000;
+        }
+
+
+        System.out.println("MARKS        : " + marks);
+        System.out.println("ATTENDANCE   : " + attendance);
+        System.out.println("BACKLOGS     : " + backlogs);
+        System.out.println("SCHOLARSHIP  : " + scholarshipType);
+        System.out.println("BASE AMOUNT  : " + baseAmount);
+        System.out.println("BONUS        : " + bonus);
+        System.out.println("FINAL AMOUNT : " + (baseAmount + bonus));
+    }
 }
