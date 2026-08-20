@@ -1,0 +1,133 @@
+// The Scholarship Decision Engine
+
+// A university is evaluating a student for a scholarship.
+
+// Given:
+
+// int marks = 87;
+// int attendance = 91;
+// int familyIncome = 450000;
+// int backlogs = 0;
+
+
+// boolean sportsAchievement = true;
+// boolean disciplinaryIssue = false;
+// boolean recommendation = true;
+
+// Your program must determine the student's scholarship category.
+
+// 🏛️ Eligibility Rules
+
+// A student is completely rejected if:
+
+// they have a disciplinary issue
+// OR they have more than 2 backlogs
+// OR attendance is below 60
+
+// If none of those occur, continue evaluating.
+
+// 🥇 PREMIUM SCHOLARSHIP
+
+// Student receives PREMIUM if:
+
+// Academic route
+// marks >= 90
+// AND
+// attendance >= 85
+// AND
+// backlogs == 0
+
+// OR
+
+// Achievement route
+// marks >= 80
+// AND
+// attendance >= 80
+// AND
+// sportsAchievement == true
+// AND
+// recommendation == true
+// AND
+// backlogs <= 1
+// 🥈 STANDARD SCHOLARSHIP
+
+// If they don't qualify for PREMIUM, they can receive STANDARD if:
+
+// marks >= 75
+// AND
+// attendance >= 75
+// AND
+// backlogs <= 2
+
+// OR
+
+// marks >= 65
+// AND
+// attendance >= 85
+// AND
+// sportsAchievement == true
+// AND
+// backlogs <= 1
+// 🥉 NEED-BASED SCHOLARSHIP
+
+// If they don't qualify for either PREMIUM or STANDARD:
+
+// They can receive NEED-BASED if:
+
+// marks >= 60
+// AND
+// attendance >= 70
+// AND
+// familyIncome < 300000
+// AND
+// backlogs <= 1
+// ❌ OTHERWISE
+// NO SCHOLARSHIP
+// 💰 Scholarship Amount
+
+// After determining the category:
+
+// PREMIUM
+// ₹100000
+// STANDARD
+// ₹50000
+// NEED-BASED
+// ₹75000
+// NO SCHOLARSHIP
+// ₹0
+// 🧨 Additional twist
+
+// There is a bonus:
+
+// If the student receives PREMIUM and:
+
+// sportsAchievement == true
+// AND
+// familyIncome < 500000
+
+// then add:
+
+// ₹25000
+
+// to the scholarship.
+
+// Otherwise:
+
+// ₹0
+// Output
+
+// Your program should produce:
+
+// MARKS              : ...
+// ATTENDANCE         : ...
+// BACKLOGS           : ...
+// SCHOLARSHIP        : ...
+// BASE AMOUNT        : ...
+// BONUS              : ...
+// FINAL AMOUNT       : ...
+
+package conditional;
+
+public class Ques5 {
+    
+}
