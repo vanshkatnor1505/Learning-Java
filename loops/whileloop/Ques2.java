@@ -17,6 +17,7 @@ public class Ques2 {
             sum += number;
             number ++;
         }
+        
         System.out.println("SUM IS : " + sum);
     }
 }
