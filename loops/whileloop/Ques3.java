@@ -22,6 +22,7 @@ public class Ques3 {
             count ++;
             number = number / 10;
         }
+        
         System.out.println("COUNT : " + count);
         System.out.println("SUM   : " + sum);
     }    
