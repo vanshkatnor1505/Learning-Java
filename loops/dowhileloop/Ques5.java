@@ -91,7 +91,65 @@
 // A wrong answer must not change the expected sequence.
 
 package loops.dowhileloop;
+import java.util.*;
 
 public class Ques5 {
-    
+    public static void main(String[] args) {
+        int number = 1;
+        int expected = 2;
+        int difference = 3;
+        int correct = 0;
+        int wrong = 0;
+        int guess;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("SEQUENCE STARTS FROM : " + number);
+
+        do{
+            
+            System.out.print("ENTER YOUR GUESS : ");
+            guess = sc.nextInt();
+
+            if (guess == expected) {
+                System.out.println("CORRECT");
+
+                expected = expected + difference;
+                difference += 2;
+                
+                correct ++;
+            }
+            else if (guess == -1) {
+                System.out.println("USER QUIT");
+                System.out.println("===== FINAL RESULT =====");
+                System.out.println("CORRECT : "+ correct);
+                System.out.println("WRONG   : " + wrong);
+                
+            }
+            else{
+                System.out.println("WRONG");
+                System.out.println("EXPECTED : " + expected);
+                wrong ++;
+            }
+
+            if (correct == 5) {
+                System.out.println("SEQUENCE MASTER");
+                System.out.println("YOU GOT ALL 5 CORRECT");
+                System.out.println("===== FINAL RESULT =====");
+                System.out.println("CORRECT : "+ correct);
+                System.out.println("WRONG   : " + wrong);
+                
+            }
+            else if(wrong == 3){
+                System.out.println("GAME OVER");
+                System.out.println("TO MANY MISTAKES");
+                System.out.println("===== FINAL RESULT =====");
+                System.out.println("CORRECT : "+ correct);
+                System.out.println("WRONG   : " + wrong);
+                
+            }
+
+        }while(correct != 5 && wrong != 3 && guess != -1);
+        
+        sc.close();
+    }
 }
