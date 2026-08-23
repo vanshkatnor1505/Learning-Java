@@ -18,7 +18,6 @@
 // Print:
 // CURRENT BALANCE : 10000
 
-
 // Option 2 — Deposit
 // Ask:
 // ENTER DEPOSIT AMOUNT:
@@ -72,19 +71,69 @@
 //    └── NO  → SHOW MENU AGAIN
 
 package loops.dowhileloop;
+
 import java.util.*;
 
 public class Ques4 {
     public static void main(String[] args) {
+        int balance = 10000;
         Scanner sc = new Scanner(System.in);
+        int selection;
 
-        System.out.println("======== ATM MENU ========");
-        System.out.println("1. CHECK BALANCE");
-        System.out.println("2. DEPOSIT");
-        System.out.println("3. WITHDRAW");
-        System.out.println("4. EXIT");
-        
-        int num = sc.nextInt();
+        do {
+            System.out.println("======== ATM MENU ========");
+            System.out.println("1. CHECK BALANCE");
+            System.out.println("2. DEPOSIT");
+            System.out.println("3. WITHDRAW");
+            System.out.println("4. EXIT");
+            System.out.print("ENTER SELECTION : ");
+            selection = sc.nextInt();
+
+            if (selection == 1) {
+                System.out.println("CURRENT BALANCE : " + balance);
+            }
+
+            else if (selection == 2) {
+                System.out.print("ENTER DEPOSIT AMOUNT : ");
+                int deposit = sc.nextInt();
+
+                if (deposit > 0) {
+                    balance += deposit;
+                    System.out.println("AMOUNT SUCCESSFULLY DEPOSITED");
+                    System.out.println("CURRENT BALANCE : " + balance);
+                } else {
+                    System.out.println("INVALID DEPOSIT");
+                }
+
+            }
+
+            else if (selection == 3) {
+                System.out.println("ENTER WITHDRAWAL AMOUNT : ");
+                int Withdrawal = sc.nextInt();
+
+                if ((Withdrawal > 0) && (Withdrawal <= balance) && (Withdrawal % 50 == 0)) {
+                    System.out.println("WITHDRAWAL SUCESSFULL");
+                    balance -= Withdrawal;
+                    System.out.println("CURRENT BALANCE : " + balance);
+                } else if (!(Withdrawal > 0)) {
+                    System.out.println("FAILED DUE TO INVALID AMONUT");
+                } else if (!(Withdrawal <= balance)) {
+                    System.out.println("FAILED NOT ENOUGH BALANCE");
+                } else if (!(Withdrawal % 50 == 0)) {
+                    System.out.println("FAILED DUE TO INVALID DENOMINAION");
+                }
+            }
+
+            else if (selection == 4) {
+                System.out.println("THANK YOU FOR USING OUR SERVICES");
+            }
+
+            else {
+                System.out.println("INVAILID SELECTION");
+            }
+
+        } while (selection != 4);
+
         sc.close();
     }
 }
