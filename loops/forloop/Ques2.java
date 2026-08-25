@@ -57,69 +57,52 @@
 
 // If multiple numbers have the same sum, keep the first one encountered.
 
-// Part 5 — The Final Classification ☠️
-// Now find numbers between 1 and 1000 that satisfy ALL of these:
-
-// Condition 1
-// The number is prime.
-
-// Condition 2
-// The digit sum is divisible by 3.
-
-// Condition 3
-// The number contains no repeated digit.
-
-// You must determine the actual qualifying numbers yourself.
-
-// Print:
-// SPECIAL NUMBERS:
-// TOTAL SPECIAL NUMBERS : xxx
-
 package loops.forloop;
 
 public class Ques2 {
     public static void main(String[] args) {
         int count = 0;
-        int largest = 0;
-        int smallest = 99;
+
+
         // Perfect numbers
+        System.out.println("PERFECT NUMBERS");
         for (int i = 1; i <= 1000; i++) {
-        int sum = 0;
+            int sum = 0;
 
-        for (int j = 1; j < i; j++) {
-        if (i % j == 0) {
-        sum += j;
-        }
-        }
+            for (int j = 1; j < i; j++) {
+                if (i % j == 0) {
+                    sum += j;
+                }
+            }
 
-        if (sum == i) {
-        System.out.println(i + " is perfect");
-        }
+            if (sum == i) {
+                System.out.println(i);
+            }
         }
 
         // Prime numbers
         for (int l = 1; l <= 1000; l++) {
 
-        boolean isPrime = true;
+            boolean isPrime = true;
 
-        if (l < 2) {
-        isPrime = false;
+            if (l < 2) {
+                isPrime = false;
+            }
+
+            for (int k = 2; k * k <= l; k++) {
+                if (l % k == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                count++;
+            }
+
         }
 
-        for (int k = 2; k * k <= l; k++) {
-        if (l % k == 0) {
-        isPrime = false;
-        break;
-        }
-        }
-
-        if (isPrime) {
-        count++;
-        }
-
-        }
-        System.out.println(count);
-
+        System.out.println("ARMSTRONG NUMBERS : ");
         for (int m = 100; m < 1000; m++) {
 
             int temp = m;
@@ -136,28 +119,35 @@ public class Ques2 {
             }
         }
 
+        int largestSum = 0;
+        int largestNumber = 0;
+
+        int smallestSum = 99;
+        int smallestNumber = 0;
+
         for (int i = 1; i <= 1000; i++) {
+
             int temp = i;
-            int digitsum = 0;
+            int digitSum = 0;
 
-            for (int j = 1; j < 5; j++) {
+            for (; temp != 0; temp /= 10) {
                 int digit = temp % 10;
-                digitsum += digit;
-                temp /= 10;
+                digitSum += digit;
             }
 
-            if (digitsum > largest) {
-                largest = digitsum;
-            }
-            if (digitsum < smallest) {
-                smallest = digitsum;
+            if (digitSum > largestSum) {
+                largestSum = digitSum;
+                largestNumber = i;
             }
 
+            if (digitSum < smallestSum) {
+                smallestSum = digitSum;
+                smallestNumber = i;
+            }
         }
-        System.out.println("LARGEST" + largest);
-        System.out.println("smallest " + smallest);
+        System.out.println("PRIME NUMBERS : " + count);
+        System.out.println("LARGEST SUM IS " + largestSum);
+        System.out.println("SMALLEST SUM IS " + smallestSum);
 
-
-        // final classification
     }
 }
