@@ -1,3 +1,11 @@
+// Store folowing in a suitable variable and print them 
+// favorite language, years of coding, enjoy coding(boolen)
+
+// EXPECTED OUTPUT 
+// Favorite Language : Java
+// Years Programming : 1
+// Enjoy Coding : true
+
 package datatypes;
 
 public class Ques4 {
