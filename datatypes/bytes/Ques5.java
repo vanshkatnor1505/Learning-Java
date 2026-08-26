@@ -1,3 +1,11 @@
+// make this card by ony using byte data type 
+
+// System.out.println("===== Player Stats =====");
+// System.out.println("Lives : " + lives);
+// System.out.println("Level : " + level);
+// System.out.println("Coins : " + coins);
+// System.out.println("========================");
+
 package datatypes.bytes;
 
 public class Ques5 {
