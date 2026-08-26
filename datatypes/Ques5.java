@@ -1,3 +1,12 @@
+// Make a student profile card like this 
+// ========== Student Profile ==========
+// Name   : Vansh
+// Age    : 19
+// Grade  : A
+// Height : 175.5
+// Passed : true
+// =====================================
+
 package datatypes;
 
 public class Ques5 {
