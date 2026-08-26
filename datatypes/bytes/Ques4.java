@@ -1,3 +1,5 @@
+// make three byte variables a, b, c and print them  
+
 package datatypes.bytes;
 
 public class Ques4 {
