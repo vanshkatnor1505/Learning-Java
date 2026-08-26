@@ -147,7 +147,9 @@ public class Ques2 {
         }
         System.out.println("PRIME NUMBERS : " + count);
         System.out.println("LARGEST SUM IS " + largestSum);
+        System.out.println("LARGEST NUMBER IS " + largestNumber);
         System.out.println("SMALLEST SUM IS " + smallestSum);
+        System.out.println("SMALLEST NUMBER IS " + smallestNumber);
 
     }
 }
