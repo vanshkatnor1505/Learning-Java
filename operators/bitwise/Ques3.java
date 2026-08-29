@@ -32,5 +32,33 @@
 package operators.bitwise;
 
 public class Ques3 {
-    
+    public static void main(String[] args) {
+        int number = 73;
+        String bit3;
+        int afterbit3 = 0;
+        int toggle6 = number ^ (1 << 6);
+        String parity = "";
+
+        if ((number & (1 << 3)) == 8) {
+            bit3 = "SET";
+            afterbit3 = number & ~(1 << 3);
+        } else {
+            bit3 = "NOT SET";
+            afterbit3 = number | (1 << 3);
+        }
+
+        if ((number & 1) == 1) {
+            parity = "ODD";
+        } else {
+            parity = "EVEN";
+        }
+
+        System.out.println("ORIGNAL : " + number);
+        System.out.println("BINARY  : " + Integer.toBinaryString(number));
+        System.out.println("BIT 3 : " + bit3);
+        System.out.println("AFTER BIT 3 : " + afterbit3);
+        System.out.println("AFTER TOGGLE 6 : " + toggle6);
+        System.out.println("PARITY : " + parity);
+
+    }
 }
