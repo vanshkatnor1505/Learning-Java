@@ -20,6 +20,7 @@ public class Ques2 {
         int a = x++ + ++x;
         int b = --x + x--;
         int c = x++ + x++ + ++x;
+        
 
         System.out.println("A        : " + a);
         System.out.println("B        : " + b);
