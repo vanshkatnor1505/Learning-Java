@@ -47,33 +47,34 @@ public class Ques1 {
         boolean pinCorrect = true;
         boolean accountBlocked = false;
 
-        boolean approved = cardActive && pinCorrect && !accountBlocked && withdrawal > 0 && withdrawal <= balance && withdrawal <= dailyLimit ;
+        boolean approved = cardActive && pinCorrect && !accountBlocked && withdrawal > 0 && withdrawal <= balance
+                && withdrawal <= dailyLimit;
 
         if (approved) {
             balance -= withdrawal;
             System.out.println("WITHDRAWL APPROVED :: " + approved);
             System.out.println("BALANCE  :: " + balance);
 
-        }else{
+        } else {
 
             String reason = "";
 
             if (!cardActive) {
                 reason = "CARD INACTIVE";
-            }else if (!pinCorrect) {
+            } else if (!pinCorrect) {
                 reason = "INVALID PIN";
-            }else if (accountBlocked) {
+            } else if (accountBlocked) {
                 reason = "ACCOUNT IS BLOCKED";
-            }else if (withdrawal <= 0) {
+            } else if (withdrawal <= 0) {
                 reason = "INVALID AMOUNT";
-            }else if (withdrawal > balance) {
+            } else if (withdrawal > balance) {
                 reason = "NOT ENOUGH BALANCE";
-            }else if (withdrawal > dailyLimit) {
+            } else if (withdrawal > dailyLimit) {
                 reason = "DAILY LIMIT EXCEED";
             }
 
             System.out.println("WITHDRAWL DENIED REASON : " + reason);
         }
-  
+
     }
 }
