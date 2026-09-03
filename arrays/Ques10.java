@@ -1,6 +1,5 @@
-// Count Occurrences of EVERY Element
+// Count Occurrences of EVERY Element in array
 
-// Now we're stepping up.
 // Given:
 // int[] numbers = {4, 7, 2, 7, 9, 7, 3, 4, 2};
 
@@ -48,6 +47,7 @@ public class Ques10 {
             System.out.println(number + " -> " + count);
 
             previous[i] = number;
+
         }
     }
 }
