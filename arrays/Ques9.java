@@ -1,11 +1,10 @@
-// Find the First Occurrence
+// Find the First Occurrence of the number
 
 // Given:
 // int[] numbers = {4, 7, 2, 9, 7, 3, 7, 4};
 // int target = 7;
 
 // Find the index of the first occurrence of target.
-
 // Expected:
 // TARGET          : 7
 // FIRST OCCURRENCE: INDEX 1
@@ -30,6 +29,7 @@ public class Ques9 {
                 occurrence = true;
                 System.out.println("FIRST OCCURRENCE  : INDEX " + index);
                 break;
+
             }
 
         }
