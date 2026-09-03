@@ -28,6 +28,7 @@ public class Ques8 {
         for (int i = 0; i < numbers.length; i++) {
             if (target == numbers[i]) {
                 frequency ++;
+                
             }
         }
         System.out.println("TARGET    : " + target);
