@@ -21,7 +21,6 @@
 // Expected:
 // MOST FREQUENT      : 10
 // FREQUENCY          : 3
-
 // If multiple elements have the same highest frequency, choose the one that appears first in the original array.
 
 // 3. Second most frequent DISTINCT element
@@ -89,17 +88,41 @@ public class Ques11 {
 
             for (int j = 0; j < numbers.length; j++) {
                 if (numbers[i] == numbers[j]) {
-                    count ++;
+                    count++;
                 }
             }
             if (count == 1) {
                 System.out.println("FIRST UNIQUE : " + numbers[i]);
                 break;
-            }
-            else{
+            } else {
                 count = 0;
             }
-            
+
         }
+
+        // Most frequent element
+        int num = 0;
+        int frequency = 0;
+        int prevcount = 0;
+        for (int i = 0; i < numbers.length; i++) {
+
+            for (int j = 0; j < numbers.length; j++) {
+                if (numbers[i] == numbers[j]) {
+                    frequency++;
+                }
+            }
+            if (frequency > prevcount) {
+                prevcount = frequency;
+                num = numbers[i];
+                frequency = 0;
+
+            } else {
+                frequency = 0;
+            }
+
+        }
+        System.out.println("MOST FREQUENT : " + num);
+        System.out.println("FREQUENCY : " + prevcount);
+
     }
 }
