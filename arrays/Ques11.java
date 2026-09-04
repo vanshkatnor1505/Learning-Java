@@ -174,9 +174,31 @@ public class Ques11 {
             }
 
         }
-
         System.out.println("MOST FREQUENT EVEN : " + frequenteven);
         System.out.println("MOST FREQUENT EVEN FREQUENCY : " + feprevcount);
 
+        // most frequent odd 
+        int frequentodd = 0;
+        int fofrequency = 0;
+        int foprevcount = 0;
+        for (int i = 0; i < numbers.length; i++) {
+
+            for (int j = 0; j < numbers.length; j++) {
+                if (numbers[i] == numbers[j]) {
+                    fofrequency++;
+                }
+            }
+            if (fofrequency > foprevcount  && numbers[i] % 2 != 0) {
+                foprevcount = fofrequency;
+                frequentodd = numbers[i];
+                fofrequency = 0;
+
+            } else {
+                fofrequency = 0;
+            }
+
+        }
+        System.out.println("MOST FREQUENT EVEN : " + frequentodd);
+        System.out.println("MOST FREQUENT EVEN FREQUENCY : " + foprevcount);
     }
 }
