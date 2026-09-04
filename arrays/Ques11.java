@@ -124,5 +124,37 @@ public class Ques11 {
         System.out.println("MOST FREQUENT : " + num);
         System.out.println("FREQUENCY : " + prevcount);
 
+
+        // Second most frequent DISTINCT element
+        int num3 = 0;
+        int frequency3 = 0;
+        int frequency4 = 0;
+        for (int i = 0; i < numbers.length; i++) {
+
+            for (int j = 0; j < numbers.length; j++) {
+                if (numbers[i] == numbers[j]) {
+                    frequency3++;
+                }
+            }
+            if (frequency3 > frequency4) {
+                if (frequency3 > frequency4 && frequency3 < prevcount) {
+                    frequency4 = frequency3;
+                    num3 = numbers[i];
+                }
+
+                frequency3 = 0;
+
+            } else {
+                frequency3 = 0;
+            }
+
+        }
+        System.out.println("SECOND LARGEST FREQUENCY : " + frequency4);
+        System.out.println("SECOND FREQUENT NUMBER : " + num3);
+
+
+        // Most frequent EVEN element
+
+        
     }
 }
