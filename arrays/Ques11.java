@@ -154,7 +154,29 @@ public class Ques11 {
 
 
         // Most frequent EVEN element
+        int frequenteven = 0;
+        int fefrequency = 0;
+        int feprevcount = 0;
+        for (int i = 0; i < numbers.length; i++) {
 
-        
+            for (int j = 0; j < numbers.length; j++) {
+                if (numbers[i] == numbers[j]) {
+                    fefrequency++;
+                }
+            }
+            if (fefrequency > feprevcount  && numbers[i] % 2 == 0) {
+                feprevcount = fefrequency;
+                frequenteven = numbers[i];
+                fefrequency = 0;
+
+            } else {
+                fefrequency = 0;
+            }
+
+        }
+
+        System.out.println("MOST FREQUENT EVEN : " + frequenteven);
+        System.out.println("MOST FREQUENT EVEN FREQUENCY : " + feprevcount);
+
     }
 }
