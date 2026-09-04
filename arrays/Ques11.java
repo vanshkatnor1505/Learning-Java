@@ -48,7 +48,7 @@
 // 4. Most frequent EVEN element
 // Find the even number occurring most frequently.
 // Expected:
-// MOST FREQUENT EVEN : 4
+// MOST FREQUENT EVEN : 10
 // FREQUENCY          : 3
 
 // Again, ties → first appearance wins.
@@ -174,7 +174,7 @@ public class Ques11 {
             }
 
         }
-        System.out.println("MOST FREQUENT EVEN : " + frequenteven);
+        System.out.println("MOST FREQUENT EVEN NUMBER: " + frequenteven);
         System.out.println("MOST FREQUENT EVEN FREQUENCY : " + feprevcount);
 
         // most frequent odd 
@@ -198,7 +198,43 @@ public class Ques11 {
             }
 
         }
-        System.out.println("MOST FREQUENT EVEN : " + frequentodd);
-        System.out.println("MOST FREQUENT EVEN FREQUENCY : " + foprevcount);
+        System.out.println("MOST FREQUENT ODD NUMBER : " + frequentodd);
+        System.out.println("MOST FREQUENT ODD FREQUENCY : " + foprevcount);
+
+
+        // Frequency report
+        int[] previous = new int[numbers.length];
+        System.out.println("FRERQUENCY REPORT : ");
+        for (int i = 0; i < numbers.length; i++) {
+
+            int number = numbers[i];
+            boolean alreadyFound = false;
+
+            for (int k = 0; k < i; k++) {
+
+                if (previous[k] == number) {
+                    alreadyFound = true;
+                    break;
+                }
+            }
+
+            if (alreadyFound) {
+                continue;
+            }
+
+            int count = 0;
+
+            for (int j = 0; j < numbers.length; j++) {
+
+                if (numbers[j] == number) {
+                    count++;
+                }
+            }
+
+            System.out.println(number + "  ->  " + count);
+
+            previous[i] = number;
+
+        }
     }
 }
