@@ -16,7 +16,7 @@ package operators.incrementdecrement;
 
 public class Ques2 {
     public static void main(String[] args) {
-        int x = 5;
+        int x = 10;
         int a = x++ + ++x;
         int b = --x + x--;
         int c = x++ + x++ + ++x;
