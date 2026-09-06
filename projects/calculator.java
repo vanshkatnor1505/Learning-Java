@@ -138,6 +138,7 @@ public class calculator {
 
         } else if (code.equals("fac")) {
             // factorial code
+            
 
         } else if (code.equals("areacircle")) {
 
