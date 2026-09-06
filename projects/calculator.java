@@ -75,10 +75,16 @@ public class calculator {
             System.out.print("ENTER THE SECOND NUMBER TO PERFORM DIVISION : ");
             double secondnum = sc.nextInt();
 
-            double result = firstnum / secondnum;
+            if (secondnum == 0) {
+                System.out.println("DENOMENATOR CANNOT BE ZERO");
+                System.out.println("THANKYOU FOR USING MY CLACULATOR");
+                System.out.println("NEXT TIME BE CAREFULL");
+            } else {
+                double result = firstnum / secondnum;
 
-            System.out.println("THANKYOU FOR USING MY CLACULATOR");
-            System.out.println("THE DIVISION OF TWO NUMBERS IS : " + result);
+                System.out.println("THANKYOU FOR USING MY CLACULATOR");
+                System.out.println("THE DIVISION OF TWO NUMBERS IS : " + result);
+            }
 
         } else if (code.equals("%")) {
 
@@ -88,10 +94,17 @@ public class calculator {
             System.out.print("ENTER THE SECOND NUMBER TO CALCULATE REMAINDER : ");
             double secondnum = sc.nextInt();
 
-            double result = firstnum * secondnum;
+            if (secondnum == 0) {
+                System.out.println("DENOMENATOR CANNOT BE ZERO");
+                System.out.println("THANKYOU FOR USING MY CLACULATOR");
+                System.out.println("NEXT TIME BE CAREFULL");
+            } else {
+                double result = firstnum * secondnum;
 
-            System.out.println("THANKYOU FOR USING MY CLACULATOR");
-            System.out.println("THE REMAINDER WHEN " + firstnum + " DIVIDED BY " + secondnum + "IS " + result);
+                System.out.println("THANKYOU FOR USING MY CLACULATOR");
+                System.out.println("THE REMAINDER WHEN " + firstnum + " DIVIDED BY " + secondnum + "IS " + result);
+
+            }
 
         } else if (code.equals("ln")) {
 
@@ -124,18 +137,24 @@ public class calculator {
             System.out.println("THE SQUARE ROOT OF " + num + " IS : " + result);
 
         } else if (code.equals("fac")) {
-            // factorial code 
+            // factorial code
 
         } else if (code.equals("areacircle")) {
 
             System.out.print("ENTER RADIUS TO FIND AREA OF CIRCLE : ");
             double radius = sc.nextDouble();
 
-            double result = radius * radius * 3.14;
+            if (radius == 0) {
+                System.out.println("THE RADIUS OF CIRCLE CANNOT BE ZERO");
+                System.out.println("THANKYOU FOR USING MY CLACULATOR");
+                System.out.println("BE CAREFULL ABOUT WHAT YOU WRITE");
+            } else {
+                double result = radius * radius * 3.14;
 
-            System.out.println("TAKING PIE VALUE 3.14");
-            System.out.println("THANKYOU FOR USING MY CLACULATOR");
-            System.out.println("THE AREA OF CIRCLE WITH RADIUS " + radius + " is " + result);
+                System.out.println("TAKING PIE VALUE 3.14");
+                System.out.println("THANKYOU FOR USING MY CLACULATOR");
+                System.out.println("THE AREA OF CIRCLE WITH RADIUS " + radius + " is " + result);
+            }
 
         } else if (code.equals("areasquare")) {
 
@@ -145,7 +164,7 @@ public class calculator {
             double result = side * side;
 
             System.out.println("THANKYOU FOR USING MY CLACULATOR");
-            System.out.println("THE AREA OF SQUARE WITH SIDE " + side +" IS " + result);
+            System.out.println("THE AREA OF SQUARE WITH SIDE " + side + " IS " + result);
 
         }
 
