@@ -4,23 +4,23 @@ import java.util.*;
 
 public class calculator {
     public static void main(String[] args) {
-        System.out.println("==============================");
-        System.out.println("|    DIGITAL V CALCULATOR    |");
-        System.out.println("==============================");
+        System.out.println("================================");
+        System.out.println("|      DIGITAL V CALCULATOR    |");
+        System.out.println("================================");
         System.out.println("-------------------------------");
-        System.out.println("|  OPERATION    |    CODE     |");
+        System.out.println("|  OPERATION     |    CODE     |");
         System.out.println("-------------------------------");
-        System.out.println("| addition      |  +          |");
-        System.out.println("| substraction  |  -          |");
-        System.out.println("| multiplication|  *          |");
-        System.out.println("| DIVISION      |     /       |");
-        System.out.println("|remainder      |    %        |");
-        System.out.println("| natural log   | ln          |");
-        System.out.println("|  log base 10  | log         |");
-        System.out.println("|square  root   | sqrt        |");
-        System.out.println("|FACTORIAL      | fac         |");
-        System.out.println("|area of circle | areacircle  |");
-        System.out.println("|area of square | areasquare  |");
+        System.out.println("| ADDITION       |      +      |");
+        System.out.println("| SUBTRACTION    |      -      |");
+        System.out.println("| MULTIPLICATION |      *      |");
+        System.out.println("| DIVISION       |      /      |");
+        System.out.println("| REMAINDER      |      %      |");
+        System.out.println("| NATURAL LOG    |     ln      |");
+        System.out.println("| LOG BASE 10    |     log     |");
+        System.out.println("| SQUARE ROOT    |     sqrt    |");
+        System.out.println("| FACTORIAL      |     fac     |");
+        System.out.println("| AREA OF CIRCLE |  areacircle |");
+        System.out.println("| AREA OF SQUARE |  areasquare |");
         System.out.println("-------------------------------");
         // log base e to be added,
         Scanner sc = new Scanner(System.in);
@@ -138,7 +138,6 @@ public class calculator {
 
         } else if (code.equals("fac")) {
             // factorial code
-            
 
         } else if (code.equals("areacircle")) {
 
@@ -162,10 +161,17 @@ public class calculator {
             System.out.print("ENTER THE SIDE OF THE SQUARE : ");
             double side = sc.nextDouble();
 
-            double result = side * side;
+            if (side == 0) {
+                System.out.println("HAVE YOU EVER SEEN SQUARE WITH SIDE ZERO ?");
+                System.out.println("OFCOURSE NOT ");
+                System.out.println("NOT THANKYOU FOR USING MY CLACULATOR");
+            } else {
+                double result = side * side;
 
-            System.out.println("THANKYOU FOR USING MY CLACULATOR");
-            System.out.println("THE AREA OF SQUARE WITH SIDE " + side + " IS " + result);
+                System.out.println("THANKYOU FOR USING MY CLACULATOR");
+                System.out.println("THE AREA OF SQUARE WITH SIDE " + side + " IS " + result);
+
+            }
 
         }
 
