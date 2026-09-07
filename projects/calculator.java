@@ -179,7 +179,16 @@ public class calculator {
 
                 }
 
+            } else if (code.equals("loge")) {
+                
             }
+
+            if (code.equals("exit")) {
+                System.out.println("THANK YOU FOR USING CALCULATOR");
+                System.out.println("CALCULATOR CLOSED BY USER");
+            }
+
+
         } while (code.equals("exit"));
 
         sc.close();
