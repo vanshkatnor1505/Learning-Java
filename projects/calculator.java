@@ -24,7 +24,7 @@ public class calculator {
         System.out.println("| FACTORIAL      |     fac     |");
         System.out.println("| AREA OF CIRCLE |  areacircle |");
         System.out.println("| AREA OF SQUARE |  areasquare |");
-        System.out.println("| LOG BASE e     |    loge     |");
+        System.out.println("| LOG BASE 2     |    log2     |");
         System.out.println("|   EXIT         |    exit     |");
         System.out.println("-------------------------------");
 
@@ -34,53 +34,68 @@ public class calculator {
 
             System.out.print("ENTER THE CODE TO PERFORM OPERATION : ");
             code = sc.nextLine();
+            sc.nextLine();
 
             if (code.equals("+")) {
 
                 System.out.print("ENTER THE FIRST NUMBER TO PERFORM ADDITION : ");
                 double firstnum = sc.nextFloat();
+                sc.nextLine();
 
                 System.out.print("ENTER THE SECOND NUMBER TO PERFORM ADDITION : ");
                 double secondnum = sc.nextFloat();
+                sc.nextLine();
 
                 double result = firstnum + secondnum;
 
                 System.out.println("THANKYOU FOR USING MY CALCULATOR");
                 System.out.println("THE ADDITION OF TWO NUMBERS IS : " + result);
 
-            } else if (code.equals("-")) {
+            } 
+            
+            else if (code.equals("-")) {
 
                 System.out.print("ENTER THE FIRST NUMBER TO PERFORM SUBTRACTION : ");
                 double firstnum = sc.nextInt();
+                sc.nextLine();
 
                 System.out.print("ENTER THE SECOND NUMBER TO PERFORM SUBTRACTION : ");
                 double secondnum = sc.nextInt();
+                sc.nextLine();
 
                 double result = firstnum - secondnum;
 
                 System.out.println("THANKYOU FOR USING MY CALCULATOR");
                 System.out.println("THE SUBTRACTION OF TWO NUMBERS IS : " + result);
 
-            } else if (code.equals("*")) {
+            } 
+            
+            else if (code.equals("*")) {
 
                 System.out.print("ENTER THE FIRST NUMBER TO PERFORM MULTIPLICATION : ");
                 double firstnum = sc.nextInt();
+                sc.nextLine();
 
                 System.out.print("ENTER THE SECOND NUMBER TO PERFORM MULTIPLICATION : ");
                 double secondnum = sc.nextInt();
+                sc.nextLine();
 
                 double result = firstnum * secondnum;
 
                 System.out.println("THANKYOU FOR USING MY CLACULATOR");
                 System.out.println("THE MULTIPLICATION OF TWO NUMBERS IS : " + result);
 
-            } else if (code.equals("/")) {
+            } 
+            
+            else if (code.equals("/")) {
 
                 System.out.print("ENTER THE FIRST NUMBER TO PERFORM DIVISION : ");
                 double firstnum = sc.nextInt();
+                sc.nextLine();
 
                 System.out.print("ENTER THE SECOND NUMBER TO PERFORM DIVISION : ");
                 double secondnum = sc.nextInt();
+                sc.nextLine();
 
                 if (secondnum == 0) {
                     System.out.println("DENOMENATOR CANNOT BE ZERO");
@@ -93,13 +108,17 @@ public class calculator {
                     System.out.println("THE DIVISION OF TWO NUMBERS IS : " + result);
                 }
 
-            } else if (code.equals("%")) {
+            } 
+            
+            else if (code.equals("%")) {
 
                 System.out.print("ENTER THE FIRST NUMBER TO CALCULATE REMAINDER : ");
                 double firstnum = sc.nextInt();
+                sc.nextLine();
 
                 System.out.print("ENTER THE SECOND NUMBER TO CALCULATE REMAINDER : ");
                 double secondnum = sc.nextInt();
+                sc.nextLine();
 
                 if (secondnum == 0) {
                     System.out.println("DENOMENATOR CANNOT BE ZERO");
@@ -113,43 +132,88 @@ public class calculator {
 
                 }
 
-            } else if (code.equals("ln")) {
+            } 
+            
+            else if (code.equals("ln")) {
 
                 System.out.print("ENTER NUMBER TO FIND NATURAL LOG OF : ");
                 double num = sc.nextInt();
+                sc.nextLine();
 
                 double result = Math.log(num);
 
                 System.out.println("THANKYOU FOR USING MY CLACULATOR");
                 System.out.println("THE NATURAL LOG OF " + num + " IS : " + result);
 
-            } else if (code.equals("log")) {
+            }
+
+            else if (code.equals("log")) {
 
                 System.out.print("ENTER NUMBER TO FIND LOG OF : ");
                 double num = sc.nextInt();
+                sc.nextLine();
 
                 double result = Math.log10(num);
 
                 System.out.println("THANKYOU FOR USING MY CLACULATOR");
                 System.out.println("THE  LOG OF " + num + " IS : " + result);
 
-            } else if (code.equals("sqrt")) {
+            }
+
+            else if (code.equals("log2")) {
+
+                System.out.print("ENTER NUMBER TO FIND LOG BASE 2 OF : ");
+                double num = sc.nextInt();
+                sc.nextLine();
+
+                double result = Math.log(num) / Math.log(2);
+
+                System.out.println("THANKYOU FOR USING MY CLACULATOR");
+                System.out.println("THE LOG BASE 2 OF " + num + " IS : " + result);
+
+            }
+
+            else if (code.equals("sqrt")) {
 
                 System.out.print("ENTER NUMBER TO FIND SQUARE ROOT OF : ");
                 double num = sc.nextInt();
+                sc.nextLine();
 
                 double result = Math.sqrt(num);
 
                 System.out.println("THANKYOU FOR USING MY CLACULATOR");
                 System.out.println("THE SQUARE ROOT OF " + num + " IS : " + result);
 
-            } else if (code.equals("fac")) {
-                // factorial code
+            } 
+            
+            else if (code.equals("fac")) {
 
-            } else if (code.equals("areacircle")) {
+                System.out.print("ENTER NUMBER TO FIND FACTORIAL OF : ");
+                int num = sc.nextInt();
+                sc.nextLine();
+
+                int fac = 1;
+
+                if (num < 0) {
+                    System.out.println("FACTORIAL OF NEGATIVE IS NOT POSSIBLE TO CALCULATE");
+                } else if (num == 1 || num == 0) {
+                    fac = 1;
+                } else {
+                    for (int i = 1; i <= (num); i++) {
+                        fac = fac * i;
+                    }
+                }
+
+                System.out.println("THANKYOU FOR USING MY CLACULATOR");
+                System.out.println("THE FACTORIAL OF " + num + " IS : " + fac);
+
+            } 
+            
+            else if (code.equals("areacircle")) {
 
                 System.out.print("ENTER RADIUS TO FIND AREA OF CIRCLE : ");
                 double radius = sc.nextDouble();
+                sc.nextLine();
 
                 if (radius == 0) {
                     System.out.println("THE RADIUS OF CIRCLE CANNOT BE ZERO");
@@ -163,10 +227,13 @@ public class calculator {
                     System.out.println("THE AREA OF CIRCLE WITH RADIUS " + radius + " is " + result);
                 }
 
-            } else if (code.equals("areasquare")) {
+            } 
+            
+            else if (code.equals("areasquare")) {
 
                 System.out.print("ENTER THE SIDE OF THE SQUARE : ");
                 double side = sc.nextDouble();
+                sc.nextLine();
 
                 if (side == 0) {
                     System.out.println("HAVE YOU EVER SEEN SQUARE WITH SIDE ZERO ?");
@@ -179,15 +246,13 @@ public class calculator {
 
                 }
 
-            } else if (code.equals("loge")) {
-                
-            }
+            } 
+            
 
             if (code.equals("exit")) {
                 System.out.println("THANK YOU FOR USING CALCULATOR");
                 System.out.println("CALCULATOR CLOSED BY USER");
             }
-
 
         } while (!code.equals("exit"));
 
