@@ -30,12 +30,10 @@ public class calculator {
 
         do {
 
-
             System.out.print("ENTER THE CODE TO PERFORM OPERATION : ");
             code = sc.nextLine();
-            sc.nextLine();
 
-            if (code.equals("+")) {
+            if ((code.equals("+")) || (code.equals("add")) || (code.equals("sum"))) {
 
                 System.out.print("ENTER THE FIRST NUMBER TO PERFORM ADDITION : ");
                 double firstnum = sc.nextFloat();
@@ -50,9 +48,9 @@ public class calculator {
                 System.out.println("THANKYOU FOR USING MY CALCULATOR");
                 System.out.println("THE ADDITION OF TWO NUMBERS IS : " + result);
 
-            } 
-            
-            else if (code.equals("-")) {
+            }
+
+            else if (code.equals("-") || (code.equals("minus"))) {
 
                 System.out.print("ENTER THE FIRST NUMBER TO PERFORM SUBTRACTION : ");
                 double firstnum = sc.nextInt();
@@ -67,9 +65,9 @@ public class calculator {
                 System.out.println("THANKYOU FOR USING MY CALCULATOR");
                 System.out.println("THE SUBTRACTION OF TWO NUMBERS IS : " + result);
 
-            } 
-            
-            else if (code.equals("*")) {
+            }
+
+            else if (code.equals("*") || (code.equals("multiply"))) {
 
                 System.out.print("ENTER THE FIRST NUMBER TO PERFORM MULTIPLICATION : ");
                 double firstnum = sc.nextInt();
@@ -84,9 +82,9 @@ public class calculator {
                 System.out.println("THANKYOU FOR USING MY CLACULATOR");
                 System.out.println("THE MULTIPLICATION OF TWO NUMBERS IS : " + result);
 
-            } 
-            
-            else if (code.equals("/")) {
+            }
+
+            else if (code.equals("/") || (code.equals("divide"))) {
 
                 System.out.print("ENTER THE FIRST NUMBER TO PERFORM DIVISION : ");
                 double firstnum = sc.nextInt();
@@ -107,8 +105,8 @@ public class calculator {
                     System.out.println("THE DIVISION OF TWO NUMBERS IS : " + result);
                 }
 
-            } 
-            
+            }
+
             else if (code.equals("%")) {
 
                 System.out.print("ENTER THE FIRST NUMBER TO CALCULATE REMAINDER : ");
@@ -131,8 +129,8 @@ public class calculator {
 
                 }
 
-            } 
-            
+            }
+
             else if (code.equals("ln")) {
 
                 System.out.print("ENTER NUMBER TO FIND NATURAL LOG OF : ");
@@ -183,8 +181,8 @@ public class calculator {
                 System.out.println("THANKYOU FOR USING MY CLACULATOR");
                 System.out.println("THE SQUARE ROOT OF " + num + " IS : " + result);
 
-            } 
-            
+            }
+
             else if (code.equals("fac")) {
 
                 System.out.print("ENTER NUMBER TO FIND FACTORIAL OF : ");
@@ -206,8 +204,8 @@ public class calculator {
                 System.out.println("THANKYOU FOR USING MY CLACULATOR");
                 System.out.println("THE FACTORIAL OF " + num + " IS : " + fac);
 
-            } 
-            
+            }
+
             else if (code.equals("areacircle")) {
 
                 System.out.print("ENTER RADIUS TO FIND AREA OF CIRCLE : ");
@@ -226,8 +224,8 @@ public class calculator {
                     System.out.println("THE AREA OF CIRCLE WITH RADIUS " + radius + " is " + result);
                 }
 
-            } 
-            
+            }
+
             else if (code.equals("areasquare")) {
 
                 System.out.print("ENTER THE SIDE OF THE SQUARE : ");
@@ -245,13 +243,15 @@ public class calculator {
 
                 }
 
-            } 
+            }
             
 
             if (code.equals("exit")) {
                 System.out.println("THANK YOU FOR USING CALCULATOR");
                 System.out.println("CALCULATOR CLOSED BY USER");
             }
+
+            
 
         } while (!code.equals("exit"));
 
