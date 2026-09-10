@@ -244,13 +244,15 @@ public class calculator {
                 }
 
             }
-            
-
-            if (code.equals("exit")) {
+            else if (code.equals("exit")) {
                 System.out.println("THANK YOU FOR USING CALCULATOR");
                 System.out.println("CALCULATOR CLOSED BY USER");
+                
             }
-
+            else{
+                System.out.println("HEY MATE BE CAREFULL ABOUT WHAT YOU ARE WRITING ");
+                System.out.println("{ " + code + " } IS OUT OF THIS CALCULATOR'S UNIVERSE ");
+            }
             
 
         } while (!code.equals("exit"));
