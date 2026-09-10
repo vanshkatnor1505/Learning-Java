@@ -13,10 +13,10 @@ public class calculator {
         System.out.println("-------------------------------");
         System.out.println("|  OPERATION     |    CODE     |");
         System.out.println("-------------------------------");
-        System.out.println("| ADDITION       |      +      |");
-        System.out.println("| SUBTRACTION    |      -      |");
-        System.out.println("| MULTIPLICATION |      *      |");
-        System.out.println("| DIVISION       |      /      |");
+        System.out.println("| ADDITION       | +, add, sum |");
+        System.out.println("| SUBTRACTION    |   minus, -  |");
+        System.out.println("| MULTIPLICATION | *, multiply |");
+        System.out.println("| DIVISION       |  /, divide  |");
         System.out.println("| REMAINDER      |      %      |");
         System.out.println("| NATURAL LOG    |     ln      |");
         System.out.println("| LOG BASE 10    |     log     |");
@@ -30,7 +30,6 @@ public class calculator {
 
         do {
 
-            // log base e to be added,
 
             System.out.print("ENTER THE CODE TO PERFORM OPERATION : ");
             code = sc.nextLine();
