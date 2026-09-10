@@ -106,7 +106,7 @@ public class calculator {
                     System.out.println("THANKYOU FOR USING MY CLACULATOR");
                     System.out.println("NEXT TIME BE CAREFULL");
                 } else {
-                    double result = firstnum * secondnum;
+                    double result = firstnum % secondnum;
 
                     System.out.println("THANKYOU FOR USING MY CLACULATOR");
                     System.out.println("THE REMAINDER WHEN " + firstnum + " DIVIDED BY " + secondnum + "IS " + result);
@@ -189,7 +189,7 @@ public class calculator {
             }
 
 
-        } while (code.equals("exit"));
+        } while (!code.equals("exit"));
 
         sc.close();
 
