@@ -27,6 +27,7 @@ public class calculator {
         System.out.println("| LOG BASE 2     |    log2     |");
         System.out.println("| SINE           |     sin     |");
         System.out.println("| COSINE         |     cos     |");
+        System.out.println("| TANGENT        |     tan     |");
         System.out.println("|   EXIT         |    exit     |");
         System.out.println("-------------------------------");
 
@@ -272,6 +273,20 @@ public class calculator {
 
                 System.out.println("THANK YOU FOR USING MY CALCULATOR");
                 System.out.println("THE COSINE OF " + angle + "° IS : " + result);
+
+            }
+
+            else if (code.equals("tan")) {
+
+                System.out.print("ENTER ANGLE IN DEGREES TO FIND TANGENT : ");
+                double angle = sc.nextDouble();
+                sc.nextLine();
+
+                double radians = Math.toRadians(angle);
+                double result = Math.tan(radians);
+
+                System.out.println("THANK YOU FOR USING MY CALCULATOR");
+                System.out.println("THE TANGENT OF " + angle + "° IS : " + result);
 
             }
 
