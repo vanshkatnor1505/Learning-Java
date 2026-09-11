@@ -26,6 +26,7 @@ public class calculator {
         System.out.println("| AREA OF SQUARE |  areasquare |");
         System.out.println("| LOG BASE 2     |    log2     |");
         System.out.println("| SINE           |     sin     |");
+        System.out.println("| COSINE         |     cos     |");
         System.out.println("|   EXIT         |    exit     |");
         System.out.println("-------------------------------");
 
@@ -257,6 +258,20 @@ public class calculator {
 
                 System.out.println("THANK YOU FOR USING MY CALCULATOR");
                 System.out.println("THE SINE OF " + angle + "° IS : " + result);
+
+            }
+
+            else if (code.equals("cos")) {
+
+                System.out.print("ENTER ANGLE IN DEGREES TO FIND COSINE : ");
+                double angle = sc.nextDouble();
+                sc.nextLine();
+
+                double radians = Math.toRadians(angle);
+                double result = Math.cos(radians);
+
+                System.out.println("THANK YOU FOR USING MY CALCULATOR");
+                System.out.println("THE COSINE OF " + angle + "° IS : " + result);
 
             }
 
