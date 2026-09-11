@@ -25,6 +25,7 @@ public class calculator {
         System.out.println("| AREA OF CIRCLE |  areacircle |");
         System.out.println("| AREA OF SQUARE |  areasquare |");
         System.out.println("| LOG BASE 2     |    log2     |");
+        System.out.println("| SINE           |     sin     |");
         System.out.println("|   EXIT         |    exit     |");
         System.out.println("-------------------------------");
 
@@ -244,16 +245,29 @@ public class calculator {
                 }
 
             }
+
+            else if (code.equals("sin")) {
+
+                System.out.print("ENTER ANGLE IN DEGREES TO FIND SINE : ");
+                double angle = sc.nextDouble();
+                sc.nextLine();
+
+                double radians = Math.toRadians(angle);
+                double result = Math.sin(radians);
+
+                System.out.println("THANK YOU FOR USING MY CALCULATOR");
+                System.out.println("THE SINE OF " + angle + "° IS : " + result);
+
+            }
+
             else if (code.equals("exit")) {
                 System.out.println("THANK YOU FOR USING CALCULATOR");
                 System.out.println("CALCULATOR CLOSED BY USER");
-                
-            }
-            else{
+
+            } else {
                 System.out.println("HEY MATE BE CAREFULL ABOUT WHAT YOU ARE WRITING ");
                 System.out.println("{ " + code + " } IS OUT OF THIS CALCULATOR'S UNIVERSE ");
             }
-            
 
         } while (!code.equals("exit"));
 
