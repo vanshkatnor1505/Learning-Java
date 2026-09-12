@@ -262,6 +262,20 @@ public class calculator {
 
             }
 
+            else if (code.equals("cosec")) {
+
+                System.out.print("ENTER ANGLE IN DEGREES TO FIND COSECANT : ");
+                double angle = sc.nextDouble();
+                sc.nextLine();
+
+                double radians = Math.toRadians(angle);
+                double result = 1 / Math.sin(radians);
+
+                System.out.println("THANK YOU FOR USING MY CALCULATOR");
+                System.out.println("THE COSECANT OF " + angle + "° IS : " + result);
+
+            }
+
             else if (code.equals("cos")) {
 
                 System.out.print("ENTER ANGLE IN DEGREES TO FIND COSINE : ");
