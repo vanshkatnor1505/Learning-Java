@@ -276,7 +276,20 @@ public class calculator {
 
             }
 
-            
+            else if (code.equals("sec")) {
+
+                System.out.print("ENTER ANGLE IN DEGREES TO FIND SEC : ");
+                double angle = sc.nextDouble();
+                sc.nextLine();
+
+                double radians = Math.toRadians(angle);
+                double result = 1 / Math.cos(radians);
+
+                System.out.println("THANK YOU FOR USING MY CALCULATOR");
+                System.out.println("THE SEC OF " + angle + "° IS : " + result);
+
+            }
+
             else if (code.equals("tan")) {
 
                 System.out.print("ENTER ANGLE IN DEGREES TO FIND TANGENT : ");
@@ -298,7 +311,7 @@ public class calculator {
                 sc.nextLine();
 
                 double radians = Math.toRadians(angle);
-                double result = 1/ Math.tan(radians);
+                double result = 1 / Math.tan(radians);
 
                 System.out.println("THANK YOU FOR USING MY CALCULATOR");
                 System.out.println("THE COT OF " + angle + "° IS : " + result);
