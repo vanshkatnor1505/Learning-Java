@@ -27,6 +27,9 @@ public class calculator {
         System.out.println("| LOG BASE 2     |    log2     |");
         System.out.println("| SINE           |     sin     |");
         System.out.println("| COSINE         |     cos     |");
+        System.out.println("| COSECANT       |   cosec     |");
+        System.out.println("|     COT        |     cot     |");
+        System.out.println("|  SECANT        |    sec      |");
         System.out.println("| TANGENT        |     tan     |");
         System.out.println("|   EXIT         |    exit     |");
         System.out.println("-------------------------------");
