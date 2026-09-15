@@ -22,7 +22,14 @@ public class Ques7 {
             int c = sc.nextInt();
 
             if (a > b && a > c) {
-                System.out.println("GREATEST A  : ");
+                System.out.println("GREATEST : " + a);
+            }
+            else if(b > a && b > c){
+                System.out.println("GREATEST : " + b);
+            }else if(c > a && c > b) {
+                System.out.println("GREATEST : " + c);
+            }else{
+                System.out.println("Two or more Numbers are equal");
             }
 
 
