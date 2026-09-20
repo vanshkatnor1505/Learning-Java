@@ -41,7 +41,37 @@
 
 
 package projects;
+import java.util.*;
 
 public class DigitalVault {
-    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+
+        System.out.print("Enter Number of elements : ");
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+
+        System.out.println("Enter " + n + " numbers :");
+        for (int i = 0; i < n ; i++) {
+            System.out.print(" > ");
+            int element = sc.nextInt();
+
+            arr[i] = element;
+
+        }
+
+
+        // part 1 : display array
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + ", ");
+        }
+
+
+
+
+
+        sc.close();
+    }
 }
