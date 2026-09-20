@@ -62,6 +62,19 @@ public class DigitalVault {
 
         }
 
+        // Min menu 
+        System.out.println("========= MAIN MENU =========");
+        System.out.println("1.  DISPLAY ARRAY ");
+        System.out.println("2.  REVERSE ARRAY ");
+        System.out.println("3.  SUM and AVERAGE ");
+        System.out.println("4.  LARGEST AND SMALLEST ");
+        System.out.println("5.  ODD AND EVEN ANALYSIS ");
+        System.out.println("6.  SEARCH ELEMENT ");
+        System.out.println("7.  FREQUENCY OF ELEMENT ");
+        System.out.println("8.  COMPLETE FREQUENCY REPORT ");
+        System.out.println("9.  SECOND LARGEST AND SECONF SMALLEST ");
+        System.out.println("10. MAXIMUM SUBARRAY  ");
+        System.out.println("11. EXIT ");
 
         // part 1 : display array
         for (int i = 0; i < arr.length; i++) {
