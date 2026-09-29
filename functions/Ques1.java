@@ -10,6 +10,7 @@ package functions;
 
 public class Ques1 {
     public static void showMessage(){
+        
         System.out.println("Welcome to java Functions !");
     }
 
