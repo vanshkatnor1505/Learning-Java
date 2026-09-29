@@ -1,16 +1,13 @@
 package practice.learning;
 
 public class Ques1 {
+    int b =5;
     public static void main(String[] args) {
-        int n = 25;
-        n%=10;
-        String hello = "hi";
-
-
-        if (hello.equals("hi") || hello.equals("hellow")) {
-            
-        }
-        System.out.println(n);
+        // swap using third variable
+        int a = 10;
+        int b = 20;
+        System.out.println("BEFORE SWAP : " + a + b);
+        int temp = a;
         
 
     }
