@@ -1,5 +1,5 @@
 /*
-TODO : Write a Java program to find the largest element in an array by passing the array to a method.
+* Write a Java program to find the largest element in an array by passing the array to a method.
 
 * Requirements:
 ? Create a method findLargest(int arr[]).
