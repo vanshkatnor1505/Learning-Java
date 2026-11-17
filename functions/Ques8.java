@@ -17,7 +17,6 @@ public class Ques8 {
     int submission = 0;
 
     int sum(int n){
-
         
         if (n > 0) {
             submission = submission + (n%10);
